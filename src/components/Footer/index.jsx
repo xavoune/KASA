@@ -1,11 +1,12 @@
 import logoFooter from '../../assets/Kasa_Logo_Dark.svg'
+import '../../styles/layouts/footer.scss'
 
 function Footer() {
   return (
-    <div>
+    <footer>
       <img src={logoFooter} alt="kasaLogo" />
       <p>© 2020 Kasa. All rights reserved</p>
-    </div>
+    </footer>
   )
 }
 

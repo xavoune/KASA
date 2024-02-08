@@ -1,0 +1,9 @@
+@import '../utils/mixins.scss';
+
+header {
+  @include HeaderBody;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
