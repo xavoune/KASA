@@ -6736,6 +6736,11 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==
 
+normalize-scss@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/normalize-scss/-/normalize-scss-8.0.0.tgz#d51d0dc5929bb5fb107de213e14e5d02430ef863"
+  integrity sha512-C6GXIxQ2LOYWrde27xWbONavmybobxp+V6TY8BiBJw5M+yMNEg2R0WjaeDtmP5JsunFYKvFOvgMAIC0/OxZuJQ==
+
 normalize-url@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
