@@ -1,0 +1,16 @@
+@import '../utils/mixins.scss';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: $textColorMain;
+  margin: 0px;
+}
+
+body {
+  margin: 0px;
+}
+
+.bodyMain {
+  @include HeaderBody;
+}
