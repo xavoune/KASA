@@ -6,4 +6,15 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    width: 170px;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
