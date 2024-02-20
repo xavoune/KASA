@@ -1,0 +1,26 @@
+.error__container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 323px);
+  justify-content: center;
+  align-items: center;
+}
+
+.error__body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.error__message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error__message__title {
+  font-size: 36px;
+  margin-top: 50px;
+}
