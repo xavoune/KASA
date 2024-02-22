@@ -1,6 +1,6 @@
 import Banner from '../../components/Banner'
-import Cards from '../../components/Cards' // Assure-toi que le chemin est correct
-import accomodationsDatas from '../../datas/logements.json' // Vérifie le chemin d'accès
+import Cards from '../../components/Cards'
+import accomodationsDatas from '../../datas/logements.json'
 import '../../styles/pages/Home.scss'
 import imgBannerHome from '../../assets/Kasa_Home.png'
 import '../../styles/components/cards.scss'
