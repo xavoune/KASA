@@ -1,1 +1,7 @@
 @import '../utils/mixins.scss';
+
+.aboutWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

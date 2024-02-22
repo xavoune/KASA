@@ -1,0 +1,33 @@
+.collapse {
+  position: relative;
+  margin-top: 33px;
+
+  &__header,
+  &__content {
+    box-sizing: border-box;
+    width: 1023px;
+    font-size: 24px;
+    border-radius: 5px;
+  }
+
+  &__header {
+    padding: 0px 18px;
+    color: #ffffff;
+    background-color: #ff6060;
+    height: 47px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2; // Assure que le header est au-dessus du content
+    position: relative; // Nécessaire pour que z-index fonctionne
+  }
+
+  &__content {
+    padding: 36px 27px 19px 18px;
+    background-color: #f6f6f6;
+    flex-shrink: 0;
+    margin-top: -9px; // Ajuste selon le besoin
+    z-index: 1; // Assure que le content est derrière le header
+    position: relative; // Nécessaire pour que z-index fonctionne
+  }
+}
