@@ -1,1 +1,37 @@
 /* scss for carousel */
+
+.slideshow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 415px; // Hauteur fixe
+  overflow: hidden; // Empêche les débordements si l'image est plus grande que le conteneur
+}
+
+.slide-image {
+  width: 100%; // Assure que l'image s'étend pour couvrir la largeur
+  height: 100%; // Assure que l'image s'étend pour couvrir la hauteur
+  object-fit: cover; // Garde les proportions de l'image, la coupe si nécessaire pour remplir l'espace
+}
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  svg {
+    fill: white; // Assurez-vous que cette couleur s'applique correctement
+  }
+}
+
+.previous-button {
+  left: 20px;
+}
+
+.next-button {
+  right: 20px;
+}

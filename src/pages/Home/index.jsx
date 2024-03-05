@@ -14,11 +14,12 @@ function Home() {
         <h1 className="kasa-banner__title">Chez vous, partout et ailleurs</h1>
       </Banner>
       <div className="bodyMain__cardHolder">
-        {accomodationsDatas.map((logement) => (
+        {accomodationsDatas.map((accommodation) => (
           <Cards
-            key={logement.id}
-            title={logement.title}
-            cover={logement.cover}
+            key={accommodation.id}
+            id={accommodation.id}
+            title={accommodation.title}
+            cover={accommodation.cover}
           />
         ))}
       </div>

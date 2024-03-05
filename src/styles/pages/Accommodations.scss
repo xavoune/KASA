@@ -1,0 +1,6 @@
+@import '../utils/mixins.scss';
+
+.accommodationBody {
+  @include HeaderBody;
+  margin-bottom: 33px;
+}
