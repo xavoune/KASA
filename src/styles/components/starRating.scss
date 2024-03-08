@@ -1,0 +1,8 @@
+//scss for starRating
+.starRating {
+  width: 100%; // Prend toute la largeur du conteneur parent
+  height: 36px;
+  display: flex;
+  justify-content: flex-start; // Alignez les étoiles à gauche, ajustez selon le besoin
+  // Ajoutez d'autres styles spécifiques nécessaires ici
+}
