@@ -3,4 +3,43 @@
 .accommodationBody {
   @include HeaderBody;
   margin-bottom: 33px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    &--location {
+      h1 {
+        font-size: 36px;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+
+    &--host {
+      width: 196px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      p {
+        width: 93px;
+        height: 52px;
+        font-size: 18px;
+        text-align: end;
+        margin-right: 10px;
+      }
+
+      img {
+        width: 64px; /* Assurez-vous que la largeur et la hauteur sont égales */
+        height: 64px;
+        border-radius: 50%; /* Ceci rend le conteneur circulaire */
+        overflow: hidden; /* Assure que l'image ne dépasse pas du cercle */
+        display: inline-block; /* ou flex, selon votre mise en page */
+      }
+    }
+  }
 }
