@@ -26,11 +26,14 @@ const Slideshow = ({ images }) => {
       >
         <path
           d="M0.960022 72.3458L8.04002 79.4258L47.64 39.8258L8.04002 0.22583L0.960022 7.30583L33.48 39.8258L0.960022 72.3458Z"
-          fill="currentColor"
+          fill="white"
         />
       </svg>
     </button>
   )
+
+  // Compteur de navigation
+  const counterText = `${currentIndex + 1}/${images.length}`
 
   return (
     <div className="slideshow-container">
@@ -46,6 +49,8 @@ const Slideshow = ({ images }) => {
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
           />
+          <div className="slide-counter">{counterText}</div>{' '}
+          {/* Ajout du compteur ici */}
           <SvgArrow className="next-button" onClick={goToNext} />
         </>
       )}

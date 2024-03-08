@@ -7,6 +7,7 @@
   position: relative;
   height: 415px; // Hauteur fixe
   overflow: hidden; // Empêche les débordements si l'image est plus grande que le conteneur
+  border-radius: 25px;
 }
 
 .slide-image {
@@ -34,4 +35,15 @@
 
 .next-button {
   right: 20px;
+}
+
+.slide-counter {
+  position: absolute;
+  bottom: 10px; /* Distance du bas du conteneur */
+  left: 50%; /* Centré horizontalement */
+  transform: translateX(-50%); /* Ajustement pour centrer exactement */
+  color: white; /* Couleur du texte */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 18px; /* Taille du texte */
 }
