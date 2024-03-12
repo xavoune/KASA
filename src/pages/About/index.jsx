@@ -11,28 +11,28 @@ function About() {
         <div className="kasa-banner__overlay"></div>
       </Banner>
       <div className="aboutWrapper">
-        <Collapse title="Fiabilité">
+        <Collapse title="Fiabilité" className="about">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
             photos sont conformes aux logements, et toutes les informations sont
             régulièrement vérifiées par nos équipes.
           </p>
         </Collapse>
-        <Collapse title="Respect">
+        <Collapse title="Respect" className="about">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
             comportement discriminatoire ou de perturbation du voisinage
             entraînera une exclusion de notre plateforme.
           </p>
         </Collapse>
-        <Collapse title="Service">
+        <Collapse title="Service" className="about">
           <p>
             Nos équipes se tiennent à votre disposition pour vous fournir une
             expérience parfaite. N'hésitez pas à nous contacter si vous avez la
             moindre question.
           </p>
         </Collapse>
-        <Collapse title="Sécurité">
+        <Collapse title="Sécurité" className="about">
           <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
             pour les voyageurs, chaque logement correspond aux critères de

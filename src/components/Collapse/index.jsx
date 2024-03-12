@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import '../../styles/components/collapse.scss' // Assure-toi d'avoir un fichier SCSS pour les styles
 
-const Collapse = ({ title, children }) => {
+const Collapse = ({ title, children, className }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
 
   return (
-    <div className="collapse">
+    <div className={`collapse ${className}`}>
       <div className="collapse__header" onClick={toggle}>
         {title}
         <svg

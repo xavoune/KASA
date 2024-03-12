@@ -4,6 +4,7 @@ import accommodationsData from '../../datas/logements.json' // Assurez-vous d'aj
 import Slideshow from '../../components/Carousel'
 import StarRating from '../../components/starRating'
 import Tags from '../../components/Tags'
+import Collapse from '../../components/Collapse'
 import '../../styles/pages/Accommodations.scss'
 
 function Accommodation() {
@@ -39,6 +40,18 @@ function Accommodation() {
           <StarRating rating={accommodation.rating} />
         </div>
         {/* Et ainsi de suite pour les autres propriétés de l'accommodation */}
+      </div>
+      <div className="accommodationBody__description">
+        <Collapse title="Description" className="accommodation">
+          <p>{accommodation.description}</p>
+        </Collapse>
+        <Collapse title="Équipements" className="accommodation">
+          <ul>
+            {accommodation.equipments.map((equipment, index) => (
+              <li key={index}>{equipment}</li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </div>
   )
