@@ -1,11 +1,9 @@
 .collapse {
   position: relative;
-  margin-top: 33px;
 
   &__header,
   &__content {
     box-sizing: border-box;
-    width: 1023px;
     font-size: 24px;
     border-radius: 5px;
   }
@@ -30,4 +28,13 @@
     z-index: 1; // Assure que le content est derrière le header
     position: relative; // Nécessaire pour que z-index fonctionne
   }
+}
+
+.accommodation {
+  width: 582px;
+}
+
+.about {
+  width: 1023px;
+  margin-top: 33px;
 }

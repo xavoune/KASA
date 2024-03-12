@@ -1,8 +1,8 @@
 @import '../utils/mixins.scss';
 
 .accommodationBody {
-  @include HeaderBody;
-  margin-bottom: 33px;
+  @include MarginSide;
+  margin-bottom: 20px;
 
   &__title {
     display: flex;
@@ -41,5 +41,10 @@
         display: inline-block; /* ou flex, selon votre mise en page */
       }
     }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
   }
 }

@@ -1,7 +1,7 @@
 @import '../utils/mixins.scss';
 
 .bodyMain {
-  @include HeaderBody;
+  @include MarginSide;
   margin-bottom: 33px;
 }
 .bodyMain__cardHolder {
