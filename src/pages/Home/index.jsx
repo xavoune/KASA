@@ -1,15 +1,20 @@
-/* Components + datas */
+/* Components import */
 import Banner from '../../components/Banner'
 import Cards from '../../components/Cards'
+/* Datas import */
 import accomodationsDatas from '../../datas/logements.json'
-/* Styles + assets */
+/* Assets import */
 import imgBannerHome from '../../assets/Kasa_Home.png'
 
-/* Génération de la page Home */
+/**
+ * @summary generate the Home page
+ *
+ */
+
 function Home() {
   return (
     <div className="home">
-      {/* Component Banner version Home */}
+      {/* Banner component with modification for Home page display */}
       <Banner className="banner--home">
         <img src={imgBannerHome} alt="bannière" className="banner__img" />
         <div className="banner__overlay"></div>
@@ -17,7 +22,7 @@ function Home() {
       </Banner>
       <section className="home__card-holder">
         {accomodationsDatas.map((accommodation) => (
-          // Component Cards qui génère une card par logement
+          // Cards component
           <Cards
             key={accommodation.id}
             id={accommodation.id}

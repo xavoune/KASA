@@ -1,18 +1,22 @@
+/* React import */
 import React from 'react'
-import { createRoot } from 'react-dom/client' // Importe createRoot
+import { createRoot } from 'react-dom/client' // createRoot import
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+/* Style import */
 import './styles/main.scss'
+/* Components import */
+import Header from './components/Header'
+import Footer from './components/Footer'
+/* Pages import */
 import Home from './pages/Home'
 import Accommodation from './pages/Accommodations'
 import About from './pages/About'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Error from './components/Error'
+import Error from './pages/Error'
 
-// Utilise createRoot pour le rendu
+// Use createRoot for render
 const container = document.getElementById('root')
 if (container !== null) {
-  const root = createRoot(container) // Crée une racine pour l'application
+  const root = createRoot(container) // Create a root
   root.render(
     <React.StrictMode>
       <Router>

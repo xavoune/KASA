@@ -1,5 +1,12 @@
+/* React import */
 import { Link } from 'react-router-dom'
+/* Asset import */
 import errorImg from '../../assets/Kasa_404.png'
+
+/**
+ * @summary generate the content of 404 page
+ *
+ */
 
 function Error() {
   return (

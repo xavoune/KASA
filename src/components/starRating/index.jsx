@@ -1,5 +1,7 @@
+/* React import */
 import React from 'react'
-// Définition du composant SVG étoile interne pour une seule étoile
+
+// Definition of the star svg
 const StarSvg = ({ filled }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -15,17 +17,27 @@ const StarSvg = ({ filled }) => (
   </svg>
 )
 
-// Composant de notation par étoiles qui utilise StarSvg
-const StarRating = ({ rating }) => {
+/**
+ * @summary convert the rate from number to stars
+ *
+ * @param {number} rating rate in the "logements.json"
+ *
+ * @example <StarRating>
+ *
+ */
+
+function StarRating({ rating }) {
   const totalStars = 5
   const fullStars = Math.floor(rating)
   const emptyStars = totalStars - fullStars
 
   return (
     <div className="star-rating">
+      {/* use full star for the rate */}
       {Array.from({ length: fullStars }, (_, i) => (
         <StarSvg key={`full-${i}`} filled={true} />
       ))}
+      {/* use empty star to complete the rate if under 5 */}
       {Array.from({ length: emptyStars }, (_, i) => (
         <StarSvg key={`empty-${i}`} filled={false} />
       ))}

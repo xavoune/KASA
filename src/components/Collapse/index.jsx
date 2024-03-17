@@ -1,8 +1,21 @@
+/* React import */
 import React, { useState } from 'react'
 
-const Collapse = ({ title, children, className }) => {
-  const [isOpen, setIsOpen] = useState(false)
+/**
+ * @summary generate a componant who can collapse
+ *
+ * @param {string} title title in the header
+ * @param {string} children collapse content
+ * @param {string} className class for special modification between pages
+ *
+ * @example <Collapse>
+ *
+ */
 
+function Collapse({ title, children, className }) {
+  // first state of the component (close)
+  const [isOpen, setIsOpen] = useState(false)
+  // change the state on click from close to open
   const toggle = () => setIsOpen(!isOpen)
 
   return (
@@ -23,6 +36,7 @@ const Collapse = ({ title, children, className }) => {
           />
         </svg>
       </div>
+      {/* content is show when the collape is open */}
       {isOpen && <div className="collapse__content">{children}</div>}
     </div>
   )

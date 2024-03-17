@@ -1,17 +1,24 @@
-/* Component */
+/* Components imports */
 import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
-/* Styles + assets */
+/* Assets import */
 import imgBannerAbout from '../../assets/Kasa_About.png'
+
+/**
+ * @summary generate About page
+ *
+ */
 
 function About() {
   return (
     <div className="about">
+      {/* Banner component with modification for About page display */}
       <Banner className="banner--about">
         <img src={imgBannerAbout} alt="bannière" className="banner__img" />
         <div className="banner__overlay"></div>
       </Banner>
       <div className="about__collapse">
+        {/* Collapse component with modification for About page display */}
         <Collapse title="Fiabilité" className="collapse--about">
           <p>
             Les annonces postées sur Kasa garantissent une fiabilité totale. Les
@@ -19,6 +26,7 @@ function About() {
             régulièrement vérifiées par nos équipes.
           </p>
         </Collapse>
+        {/* Collapse component with modification for About page display */}
         <Collapse title="Respect" className="collapse--about">
           <p>
             La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
@@ -26,6 +34,7 @@ function About() {
             entraînera une exclusion de notre plateforme.
           </p>
         </Collapse>
+        {/* Collapse component with modification for About page display */}
         <Collapse title="Service" className="collapse--about">
           <p>
             Nos équipes se tiennent à votre disposition pour vous fournir une
@@ -33,6 +42,7 @@ function About() {
             moindre question.
           </p>
         </Collapse>
+        {/* Collapse component with modification for About page display */}
         <Collapse title="Sécurité" className="collapse--about">
           <p>
             La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que
