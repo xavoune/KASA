@@ -1,51 +1,54 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import accommodationsData from '../../datas/logements.json' // Assurez-vous d'ajuster le chemin selon votre structure de projet
+import { useParams, useNavigate } from 'react-router-dom'
+import accommodationsData from '../../datas/logements.json'
 import Slideshow from '../../components/Carousel'
 import StarRating from '../../components/starRating'
 import Tags from '../../components/Tags'
 import Collapse from '../../components/Collapse'
-import '../../styles/pages/Accommodations.scss'
 
 function Accommodation() {
-  const { id } = useParams() // Récupère l'ID du paramètre URL
+  const { id } = useParams()
+  const navigate = useNavigate()
   const [accommodation, setAccommodation] = useState(null)
 
   useEffect(() => {
-    // Trouvez le logement correspondant par ID
     const foundAccommodation = accommodationsData.find((item) => item.id === id)
+    if (!foundAccommodation) {
+      navigate('/404', { replace: true })
+      return
+    }
     setAccommodation(foundAccommodation)
-  }, [id]) // Recharge le composant lorsque l'ID change
+  }, [id, navigate])
 
   if (!accommodation) {
-    // Ajout d'une vérification ici pour gérer l'état null
-    // Vous pouvez choisir de rendre quelque chose de différent ici, comme un spinner de chargement ou simplement rien.
-    return <div>Chargement...</div> // Ou <div></div> si vous ne voulez rien afficher
+    return <div>Chargement...</div>
   }
 
   return (
-    <div className="accommodationBody">
+    <div className="accommodation">
       <Slideshow images={accommodation.pictures} />
-
-      {/* Maintenant, cette ligne ne causera pas d'erreur car elle est exécutée seulement si accommodation n'est pas null */}
-      <div className="accommodationBody__title">
-        <div className="accommodationBody__title--location">
+      <div className="accommodation__title">
+        <div className="accommodation__title-location">
           <h1>{accommodation.title}</h1>
           <p>{accommodation.location}</p>
           <Tags tags={accommodation.tags} />
         </div>
-        <div className="accommodationBody__title--host">
-          <p>{accommodation.host.name}</p>
-          <img src={accommodation.host.picture} alt={accommodation.host.name} />
+        <div className="accommodation__title-host">
+          <div className="accommodation__host-info">
+            <p>{accommodation.host.name}</p>
+            <img
+              src={accommodation.host.picture}
+              alt={accommodation.host.name}
+            />
+          </div>
           <StarRating rating={accommodation.rating} />
         </div>
-        {/* Et ainsi de suite pour les autres propriétés de l'accommodation */}
       </div>
-      <div className="accommodationBody__description">
-        <Collapse title="Description" className="accommodation">
+      <div className="accommodation__description">
+        <Collapse title="Description" className="collapse--accommodation">
           <p>{accommodation.description}</p>
         </Collapse>
-        <Collapse title="Équipements" className="accommodation">
+        <Collapse title="Équipements" className="collapse--accommodation">
           <ul>
             {accommodation.equipments.map((equipment, index) => (
               <li key={index}>{equipment}</li>

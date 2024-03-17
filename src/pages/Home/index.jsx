@@ -1,20 +1,23 @@
+/* Components + datas */
 import Banner from '../../components/Banner'
 import Cards from '../../components/Cards'
 import accomodationsDatas from '../../datas/logements.json'
-import '../../styles/pages/Home.scss'
+/* Styles + assets */
 import imgBannerHome from '../../assets/Kasa_Home.png'
-import '../../styles/components/cards.scss'
 
+/* Génération de la page Home */
 function Home() {
   return (
-    <div className="bodyMain">
-      <Banner>
-        <img src={imgBannerHome} alt="bannière" className="kasa-banner__img" />
-        <div className="kasa-banner__overlay"></div>
-        <h1 className="kasa-banner__title">Chez vous, partout et ailleurs</h1>
+    <div className="home">
+      {/* Component Banner version Home */}
+      <Banner className="banner--home">
+        <img src={imgBannerHome} alt="bannière" className="banner__img" />
+        <div className="banner__overlay"></div>
+        <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
       </Banner>
-      <div className="bodyMain__cardHolder">
+      <section className="home__card-holder">
         {accomodationsDatas.map((accommodation) => (
+          // Component Cards qui génère une card par logement
           <Cards
             key={accommodation.id}
             id={accommodation.id}
@@ -22,7 +25,7 @@ function Home() {
             cover={accommodation.cover}
           />
         ))}
-      </div>
+      </section>
     </div>
   )
 }

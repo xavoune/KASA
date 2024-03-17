@@ -1,20 +1,36 @@
-.tagsContainer {
+@use '../utils/' as *;
+
+.tags-container {
+  margin: 10px 0px;
   display: flex;
+
+  @include desktop-only {
+    margin: 20px 0px;
+  }
 
   span {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 10px;
-    min-width: 115px;
-    height: 25px;
+    width: 84px;
+    height: 18px;
     background-color: #ff6060;
     border-radius: 10px;
 
+    @include desktop-only {
+      min-width: 115px;
+      height: 25px;
+    }
+
     p {
       padding: 0px 10px;
-      font-size: 14px;
+      font-size: $TagsText_M;
       color: white;
+
+      @include desktop-only {
+        font-size: $TagsText_D;
+      }
     }
   }
 }

@@ -1,10 +1,18 @@
+@use '../utils/' as *;
+
 .collapse {
   position: relative;
 
+  &__icon {
+    transform: rotate(180deg);
+  }
+
+  &__icon.rotate {
+    transform: rotate(0deg);
+  }
+
   &__header,
   &__content {
-    box-sizing: border-box;
-    font-size: 24px;
     border-radius: 5px;
   }
 
@@ -12,29 +20,117 @@
     padding: 0px 18px;
     color: #ffffff;
     background-color: #ff6060;
-    height: 47px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 2; // Assure que le header est au-dessus du content
-    position: relative; // Nécessaire pour que z-index fonctionne
+    z-index: 2;
+    position: relative;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    @include desktop-only {
+      svg {
+        width: 24px;
+        height: 14px;
+      }
+    }
   }
 
   &__content {
-    padding: 36px 27px 19px 18px;
+    margin-top: -9px;
     background-color: #f6f6f6;
     flex-shrink: 0;
-    margin-top: -9px; // Ajuste selon le besoin
-    z-index: 1; // Assure que le content est derrière le header
-    position: relative; // Nécessaire pour que z-index fonctionne
+    z-index: 1;
+    position: relative;
   }
-}
 
-.accommodation {
-  width: 582px;
-}
+  &--about {
+    margin-top: 20px;
+    width: 100%;
 
-.about {
-  width: 1023px;
-  margin-top: 33px;
+    @include desktop-only {
+      width: 1023px;
+      margin-top: 33px;
+    }
+
+    .collapse__header {
+      height: 30px;
+      font-size: $AboutText_M;
+
+      @include desktop-only {
+        height: 47px;
+        font-size: $AboutText_D;
+      }
+    }
+
+    .collapse__content {
+      padding: 20px 11px 0px 7px;
+      height: 145px;
+
+      @include desktop-only {
+        padding: 36px 27px 19px 18px;
+        height: auto;
+      }
+
+      p {
+        font-size: $AboutText_M;
+
+        @include desktop-only {
+          font-size: $AboutText_D;
+        }
+      }
+    }
+  }
+
+  &--accommodation {
+    width: 100%;
+
+    @include desktop-only {
+      width: 582px;
+    }
+
+    .collapse__header {
+      height: 30px;
+      font-size: $AccommodationText_M;
+
+      @include desktop-only {
+        height: 52px;
+        font-size: $AccommodationText_D;
+      }
+    }
+
+    .collapse__content {
+      padding: 20px 5px 0px 10px;
+      height: 145px;
+
+      @include desktop-only {
+        padding: 40px 10px 0px 20px;
+        height: 249px;
+      }
+
+      p {
+        font-size: $AccommodationText_M;
+
+        @include desktop-only {
+          font-size: $AccommodationText_D;
+          font-weight: 400;
+          line-height: 142.6%;
+        }
+      }
+
+      li {
+        font-size: $AccommodationText_M;
+        font-weight: 400;
+        line-height: 142.6%;
+        list-style-type: none;
+
+        @include desktop-only {
+          font-size: $AccommodationText_D;
+        }
+      }
+    }
+  }
 }

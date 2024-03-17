@@ -1,50 +1,99 @@
-@import '../utils/mixins.scss';
+@use '../utils/' as *;
 
-.accommodationBody {
-  @include MarginSide;
-  margin-bottom: 20px;
+.accommodation {
+  @include MarginSide_M;
+
+  @include desktop-only {
+    @include MarginSide_D;
+  }
 
   &__title {
+    margin-top: 15px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 
-    &--location {
+    @include desktop-only {
+      margin-top: 30px;
+      flex-direction: row;
+    }
+
+    &-location {
       h1 {
-        font-size: 36px;
+        font-size: $TitleAccommodationText_M;
         font-weight: 500;
+        line-height: 142.6%;
+
+        @include desktop-only {
+          font-size: $TitleAccommodationText_D;
+        }
       }
 
       p {
-        font-size: 18px;
+        font-size: $AccommodationText_M;
+
+        @include desktop-only {
+          font-size: $AccommodationText_D;
+        }
       }
     }
 
-    &--host {
-      width: 196px;
+    &-host {
+      width: 100%;
+      height: auto;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      justify-content: space-between;
       align-items: center;
 
-      p {
-        width: 93px;
-        height: 52px;
-        font-size: 18px;
-        text-align: end;
-        margin-right: 10px;
+      @include desktop-only {
+        width: 196px;
+        flex-direction: column;
+        justify-content: flex-start;
       }
+    }
+  }
 
-      img {
-        width: 64px; /* Assurez-vous que la largeur et la hauteur sont égales */
+  &__host-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      width: 90px;
+      font-size: $AccommodationText_M;
+      text-align: end;
+      margin-right: 10px;
+
+      @include desktop-only {
+        width: 120px;
+        font-size: $AccommodationText_D;
+      }
+    }
+
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      overflow: hidden;
+      display: inline-block;
+
+      @include desktop-only {
+        width: 64px;
         height: 64px;
-        border-radius: 50%; /* Ceci rend le conteneur circulaire */
-        overflow: hidden; /* Assure que l'image ne dépasse pas du cercle */
-        display: inline-block; /* ou flex, selon votre mise en page */
       }
     }
   }
 
   &__description {
+    margin-top: 15px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
+
+    @include desktop-only {
+      flex-direction: row;
+    }
   }
 }

@@ -1,9 +1,8 @@
 import React from 'react'
-import '../../styles/components/tags.scss'
 
 const Tags = ({ tags }) => {
   return (
-    <div className="tagsContainer">
+    <div className="tags-container">
       {tags.map((tag, index) => (
         <span key={index} className="tag">
           <p>{tag}</p>

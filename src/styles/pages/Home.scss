@@ -1,16 +1,27 @@
-@import '../utils/mixins.scss';
+@use '../utils/' as *;
 
-.bodyMain {
-  @include MarginSide;
-  margin-bottom: 33px;
-}
-.bodyMain__cardHolder {
-  margin: 43px 0px;
-  padding: 56px 50px;
-  background-color: #f6f6f6;
-  border-radius: 25px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 50px;
+.home {
+  @include MarginSide_D;
+
+  @include mobile-only {
+    @include MarginSide_M;
+  }
+
+  &__card-holder {
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    a {
+      display: flex;
+    }
+
+    @include desktop-only {
+      padding: 56px 50px;
+      background-color: #f6f6f6;
+      gap: 50px;
+    }
+  }
 }

@@ -1,5 +1,25 @@
 /* colors variables */
-
 $textColorMain: #ff6060;
 $textColorFooter: #ffffff;
 $textBackground: #f6f6f6;
+
+/* Font-size desktop */
+$BannerText_D: 48px;
+$TitleAccommodationText_D: 36px;
+$AboutText_D: 24px;
+$AccommodationText_D: 18px;
+$TagsText_D: 14px;
+
+/* Font-size mobile */
+$BannerText_M: 24px;
+$TitleAccommodationText_M: 18px;
+$AboutText_M: 12px;
+$AccommodationText_M: 12px;
+$TagsText_M: 10px;
+
+/*Breakpoint for responsive*/
+$breakpoints: (
+  mobile: 425px,
+  tablet: 768px,
+  desktop: 1024px,
+);

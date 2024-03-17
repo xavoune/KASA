@@ -1,7 +1,7 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client' // Importe createRoot
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import '../src/styles/main.scss'
+import './styles/main.scss'
 import Home from './pages/Home'
 import Accommodation from './pages/Accommodations'
 import About from './pages/About'

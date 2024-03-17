@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import '../../styles/components/error.scss'
 import errorImg from '../../assets/Kasa_404.png'
+
 function Error() {
   return (
     <div className="error__container">

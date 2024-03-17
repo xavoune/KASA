@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import '../../styles/components/collapse.scss' // Assure-toi d'avoir un fichier SCSS pour les styles
 
 const Collapse = ({ title, children, className }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -11,6 +10,7 @@ const Collapse = ({ title, children, className }) => {
       <div className="collapse__header" onClick={toggle}>
         {title}
         <svg
+          className={`collapse__icon ${isOpen ? 'rotate' : ''}`}
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="14"

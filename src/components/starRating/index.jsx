@@ -1,11 +1,10 @@
-import '../../styles/components/starRating.scss'
 import React from 'react'
 // Définition du composant SVG étoile interne pour une seule étoile
 const StarSvg = ({ filled }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="20" // Taille ajustée pour une seule étoile
-    height="20" // Taille ajustée pour une seule étoile
+    width="36" // Taille ajustée pour une seule étoile
+    height="36" // Taille ajustée pour une seule étoile
     viewBox="0 0 36 36" // ViewBox ajusté pour une seule étoile
     fill="none"
   >
@@ -23,7 +22,7 @@ const StarRating = ({ rating }) => {
   const emptyStars = totalStars - fullStars
 
   return (
-    <div className="starRating">
+    <div className="star-rating">
       {Array.from({ length: fullStars }, (_, i) => (
         <StarSvg key={`full-${i}`} filled={true} />
       ))}

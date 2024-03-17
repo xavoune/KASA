@@ -1,8 +1,15 @@
-//scss for starRating
-.starRating {
-  width: 100%; // Prend toute la largeur du conteneur parent
-  height: 36px;
+@use '../utils/' as *;
+
+.star-rating {
+  width: 98px;
+  height: 18px;
   display: flex;
-  justify-content: flex-start; // Alignez les étoiles à gauche, ajustez selon le besoin
-  // Ajoutez d'autres styles spécifiques nécessaires ici
+  align-items: center;
+  justify-content: space-between;
+
+  @include desktop-only {
+    margin-top: 20px;
+    width: 196px;
+    height: 36px;
+  }
 }

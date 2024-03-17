@@ -1,14 +1,7 @@
-@import 'utils/mixins.scss';
-@import 'utils/variables.scss';
+@use 'bases';
 
-@import 'bases/normalize.scss';
+@use 'layouts';
 
-@import 'bases/typo.scss';
-@import 'bases/base.scss';
-@import 'layouts/footer.scss';
-@import 'layouts/header.scss';
+@use 'components';
 
-@import 'components/cards.scss';
-@import 'components/carousel.scss';
-
-@import 'pages/Home.scss';
+@use 'pages';

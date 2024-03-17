@@ -1,4 +1,3 @@
-import '../../styles/components/carousel.scss'
 import React, { useState } from 'react'
 
 const Slideshow = ({ images }) => {

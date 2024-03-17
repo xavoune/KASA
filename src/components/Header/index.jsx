@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import logoHeader from '../../assets/Kasa_Logo_Light.svg'
-import '../../styles/layouts/header.scss'
 
 function Header() {
   return (
     <header>
-      <div>
+      <div className="kasaLogo">
         <img src={logoHeader} alt="kasaLogo" />
       </div>
       <nav>

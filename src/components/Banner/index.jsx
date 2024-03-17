@@ -1,7 +1,5 @@
-import '../../styles/components/banner.scss'
-
-function Banner({ children }) {
-  return <div className="kasa-banner">{children}</div>
+function Banner({ children, className }) {
+  return <div className={`banner ${className}`}>{children}</div>
 }
 
 export default Banner
