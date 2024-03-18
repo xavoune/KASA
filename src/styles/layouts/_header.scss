@@ -24,6 +24,7 @@ header {
     margin-left: 10px;
     font-size: 12px;
     text-transform: uppercase;
+    text-decoration: none;
 
     @include desktop-only {
       margin-left: 60px;
@@ -52,4 +53,8 @@ header {
     height: 100%;
     object-fit: contain; // Garde l'image dans les limites sans la déformer
   }
+}
+
+.link-active {
+  text-decoration: underline;
 }
