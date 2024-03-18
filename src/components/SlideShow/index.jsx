@@ -71,19 +71,22 @@ function SlideShow({ images }) {
     <div className="slideshow-container">
       {images && images.length > 0 && (
         <>
-          <SvgArrow
-            className="previous-button"
-            onClick={goToPrevious}
-            isNext={false}
-          />
+          {images.length > 1 && (
+            <>
+              <SvgArrow
+                className="previous-button"
+                onClick={goToPrevious}
+                isNext={false}
+              />
+              <SvgArrow className="next-button" onClick={goToNext} />
+            </>
+          )}
           <img
             className="slide-image"
             src={images[currentIndex]}
             alt={`Slide ${currentIndex + 1}`}
           />
-          <div className="slide-counter">{counterText}</div>{' '}
-          {/* Ajout du compteur ici */}
-          <SvgArrow className="next-button" onClick={goToNext} />
+          <div className="slide-counter">{counterText}</div>
         </>
       )}
     </div>
