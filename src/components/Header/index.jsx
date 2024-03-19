@@ -11,7 +11,7 @@ import logoHeader from '../../assets/Kasa_Logo_Light.svg'
 function Header() {
   const location = useLocation()
 
-  // Fonction pour déterminer si le lien doit être activé
+  // Function to determinate if link active
   const isActive = (pathname) => location.pathname === pathname
 
   return (
